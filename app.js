@@ -9,6 +9,14 @@ app.use(express.json());
 app.get('/', (req, res) => {
   res.send('✅ API is working!');
 });
+app.get("/test", async (req, res) => {
+  try {
+    const schools = await prisma.school.findMany();
+    res.json(schools);
+  } catch (err) {
+    res.status(500).json({ message: "DB error", error: err.message });
+  }
+});
 
 app.use('/api', schoolRoutes);
 console.log("testing")
