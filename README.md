@@ -22,5 +22,3 @@ A RESTful API to manage schools and fetch nearby schools based on user's coordin
 
 ---
 
-## 📁 Project Structure
-
