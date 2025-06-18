@@ -6,6 +6,10 @@ const app = express();
 app.use(express.json());
 
 // Routes
+app.get('/', (req, res) => {
+  res.send('✅ API is working!');
+});
+
 app.use('/api', schoolRoutes);
 console.log("testing")
 // Start server
